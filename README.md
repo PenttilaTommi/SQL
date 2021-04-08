@@ -7,4 +7,4 @@ Mitenhän tämän kiiluisi toimia? Hakemalla niin, että täytän ainoastaan etu
 Olen antanut sähköpostini varmasti kymmeniin palveluihin. Melko usein vasten tahtoani mutta nykyään se on edellytyksenä useissa palveluissa. Tämän takia olen aikoja sitten luonut "AlterEgo" sähköpostiosoitteen jota käytän jos on pakko antaa osoite johonkin vähemmän viralliisn palveluihin tai palveluihin jotka oletettavasti alkavat suorastaan spämmäämään sähköpostilla. NÄissä voi myös käyttää tekaistuja nimiä tai olemattomia puhelinnumeroita.
 
 3. Tehtävä: Piirrä kaavio
-![Piirros](.jpg)
+![Piirros](IMG_20210408_183343.jpg.)
