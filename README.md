@@ -44,3 +44,20 @@ Ohjelmoinnin perusteet
 Ohjelmoinnin jatkokurssi
 Tietokantojen perusteet
 Ohjelmoinnin perusteet
+
+## 6. Tehtävä: Uniikit rivit
+Tee nyt kysely, jolla saat listattua Kurssisuoritus-taulussa olevat uniikit kurssit.
+
+näytä taulut
+select DISTINCT kurssi from kurssisuoritus
+
+
+
+ Oikein meni!
+
+
+Suoritetun kyselyn tulos
+kurssi
+Ohjelmoinnin perusteet
+Ohjelmoinnin jatkokurssi
+Tietokantojen perusteet
