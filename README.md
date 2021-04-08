@@ -75,3 +75,28 @@ select * from opiskelija where nimi ='anna'
 
 Suoritetun kyselyn tulos
 Tyhjä vastaus
+
+## 8. Tehtävä: Hae ehdolla
+
+### miksi tuo antaa tulokseen myös opiskelijanumeron 999998?
+
+Tee nyt kysely, jolla saat listattua Kurssisuoritus-taulusta kaikki Pihla-nimisen opiskelijan suoritukset. Voit olettaa, että Opiskelija-taulun sisältö on täsmälleen se, kuin mikä se tähän asti on ollut. Vinkki: millä Pihlan tunnistaa kummassakin taulussa?
+
+piilota taulut
+Taulut
+Opiskelija (opiskelijanumero integer, nimi text, syntymävuosi integer, pääaine text)
+Kurssisuoritus (opiskelija integer, kurssi text, päivämäärä date, arvosana integer)
+select * from  kurssisuoritus where '999999'
+
+
+
+
+Suoritetun kyselyn tulos
+ Virhe:
+
+Kyselyn vastauksessa tulisi olla 3 riviä, mutta nyt niitä oli 4
+opiskelija	kurssi	päivämäärä	arvosana
+999999	Ohjelmoinnin perusteet	2014-08-01	5
+999999	Ohjelmoinnin jatkokurssi	2014-08-01	5
+999999	Tietokantojen perusteet	2014-10-20	3
+999998	Ohjelmoinnin perusteet	2013-08-01	4
