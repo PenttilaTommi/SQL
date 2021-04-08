@@ -61,3 +61,17 @@ kurssi
 Ohjelmoinnin perusteet
 Ohjelmoinnin jatkokurssi
 Tietokantojen perusteet
+
+## 7. Tehtävä: Hae nimellä
+Tee nyt kysely, jolla saat listattua Opiskelija-taulusta kaikki ne opiskelijat, joiden nimi on 'Anna'.
+
+näytä taulut
+select * from opiskelija where nimi ='anna'
+
+
+
+ Oikein meni!
+
+
+Suoritetun kyselyn tulos
+Tyhjä vastaus
