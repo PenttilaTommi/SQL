@@ -8,3 +8,22 @@ Olen antanut sähköpostini varmasti kymmeniin palveluihin. Melko usein vasten t
 
 3. Tehtävä: Piirrä kaavio
 ![Piirros](IMG_20210408_183343.jpg.)
+
+4. Tehtävä: Hae kaikki
+Tee nyt kysely, jolla saat listattua kaikki Kurssisuoritus-taulussa olevat rivit.
+
+näytä taulut
+select * from Kurssisuoritus
+
+
+
+ Oikein meni!
+
+
+Suoritetun kyselyn tulos
+opiskelija	kurssi	päivämäärä	arvosana
+999999	Ohjelmoinnin perusteet	2014-08-01	5
+999999	Ohjelmoinnin jatkokurssi	2014-08-01	5
+999999	Tietokantojen perusteet	2014-10-20	3
+999998	Ohjelmoinnin perusteet	2013-08-01	4
+
