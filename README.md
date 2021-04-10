@@ -124,3 +124,16 @@ opiskelijanumero	nimi	syntymävuosi	pääaine
 999998	Joni	1993	Tietojenkäsittelytiede
 999996	Krista	1990	Tietojenkäsittelytiede
 999994	Gandhi	1869	Oikeustiede
+
+'NOT LIKE' kyselyllä ilmestyy pelkät matematiikat.
+
+
+SELECT DISTINCT * FROM Opiskelija WHERE pääaine NOT LIKE '%tiede%'
+
+
+
+
+Suoritetun kyselyn tulos
+opiskelijanumero	nimi	syntymävuosi	pääaine
+999997	Anna	1991	Matematiikka
+999995	Matti	1970	Matematiikka
