@@ -100,3 +100,27 @@ opiskelija	kurssi	päivämäärä	arvosana
 999999	Ohjelmoinnin jatkokurssi	2014-08-01	5
 999999	Tietokantojen perusteet	2014-10-20	3
 999998	Ohjelmoinnin perusteet	2013-08-01	4
+
+## 9. Tehtävä: LIKE
+
+### Oletin että DISTNCT poisteisi turhat rivit mutta ei enkä keksi miten ne häipyy???
+
+Tee nyt kysely, jolla saat listattua kaikki Opiskelija-taulussa olevat pääaineet, joissa esiintyy sana "tiede".
+
+Huom! Tee kysely siten, että näet vain uniikit vastaukset. Kyselyn vastauksessa pitäisi olla vain 2 riviä. Kun saat kyselyn toimimaan, kokeile mitä tapahtuu jos muutat 'LIKE'-operaation muotoon 'NOT LIKE'.
+
+piilota taulut
+Taulut
+Opiskelija (opiskelijanumero integer, nimi text, syntymävuosi integer, pääaine text)
+Kurssisuoritus (opiskelija integer, kurssi text, päivämäärä date, arvosana integer)
+SELECT DISTINCT * FROM Opiskelija WHERE pääaine LIKE '%tiede%'
+
+
+
+
+Suoritetun kyselyn tulos
+opiskelijanumero	nimi	syntymävuosi	pääaine
+999999	Pihla	1997	Tietojenkäsittelytiede
+999998	Joni	1993	Tietojenkäsittelytiede
+999996	Krista	1990	Tietojenkäsittelytiede
+999994	Gandhi	1869	Oikeustiede
