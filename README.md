@@ -131,3 +131,28 @@ Suoritetun kyselyn tulos
 opiskelijanumero	nimi	syntymävuosi	pääaine
 999997	Anna	1991	Matematiikka
 999995	Matti	1970	Matematiikka
+
+## 10. Tehtävä: Yhdistelyharjoittelua
+
+### Miksi pitäisi olla 4 riviä?? 
+Tee nyt kysely, jolla saat listattua kaikki Kurssit ja niihin liittyvät kurssisuoritukset. Valitse näytettäviksi sarakkeiksi vain kurssin nimi ja kurssisuorituksen päivämäärä ja arvosana.
+
+Kyselyn tuloksessa pitäisi olla 4 riviä ja 3 saraketta.
+
+näytä taulut
+SELECT DISTINCT nimi, päivämäärä, arvosana FROM kurssi, kurssisuoritus
+
+
+
+
+Suoritetun kyselyn tulos
+nimi	päivämäärä	arvosana
+Ohjelmoinnin perusteet	2014-08-01	5
+Ohjelmoinnin perusteet	2014-10-20	3
+Ohjelmoinnin perusteet	2013-08-01	4
+Ohjelmoinnin jatkokurssi	2014-08-01	5
+Ohjelmoinnin jatkokurssi	2014-10-20	3
+Ohjelmoinnin jatkokurssi	2013-08-01	4
+Tietokantojen perusteet	2014-08-01	5
+Tietokantojen perusteet	2014-10-20	3
+Tietokantojen perusteet	2013-08-01	4
