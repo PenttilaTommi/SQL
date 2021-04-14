@@ -170,3 +170,29 @@ Gandhi	2014-08-01	5
 Gandhi	2014-08-01	5
 Gandhi	2014-10-20	3
 Gandhi	2013-08-01	4
+
+## 12. Tehtävä: Tulosten otsikointi
+Tee nyt kysely, joka tulostaa jokaiseen kurssiin liittyvän tehtävän. Tulostuksen otsikoiden nimien tulee olla 'kurssi' ja 'tehtävä'.
+
+näytä taulut
+SELECT Kurssi.nimi  AS kurssi, Tehtävä.nimi AS tehtävä 
+FROM Kurssi, Tehtävä
+
+
+
+
+Suoritetun kyselyn tulos
+kurssi	tehtävä
+Ohjelmoinnin perusteet	Fotari
+Ohjelmoinnin perusteet	Onko tässä rekursio?
+Ohjelmoinnin perusteet	Keksi tehtävä
+Ohjelmoinnin perusteet	Koetus
+Ohjelmoinnin jatkokurssi	Fotari
+Ohjelmoinnin jatkokurssi	Onko tässä rekursio?
+Ohjelmoinnin jatkokurssi	Keksi tehtävä
+Ohjelmoinnin jatkokurssi	Koetus
+Tietokantojen perusteet	Fotari
+Tietokantojen perusteet	Onko tässä rekursio?
+Tietokantojen perusteet	Keksi tehtävä
+Tietokantojen perusteet	Koetus
+
