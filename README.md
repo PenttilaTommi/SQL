@@ -196,3 +196,23 @@ Tietokantojen perusteet	Onko tässä rekursio?
 Tietokantojen perusteet	Keksi tehtävä
 Tietokantojen perusteet	Koetus
 
+## 13. Tehtävä: Hakujen jäsentely
+Tee nyt kysely, joka tulostaa kaikki tehtävät, jotka opiskelija 'Anna' on suorittanut. Tee tulostuksesta sellainen, että yksi sarake sisältää kurssin nimen, ja toinen sarake tehtävän nimen.
+
+näytä taulut
+
+SELECT Tehtävä.nimi AS tehtävä, Kurssi.nimi AS kurssi FROM Tehtävä, Kurssi, Kurssitehtävä, Tehtäväsuoritus, Opiskelija
+WHERE Tehtävä.tunnus = Kurssitehtävä.tehtävä
+AND Kurssitehtävä.kurssi = Kurssi.kurssitunnus
+AND Kurssitehtävä.tunnus = Tehtäväsuoritus.tehtävä
+AND Opiskelija.opiskelijanumero = Tehtäväsuoritus.opiskelija
+AND Opiskelija.nimi = 'Anna'
+
+
+
+
+Suoritetun kyselyn tulos
+tehtävä	kurssi
+Fotari	Ohjelmoinnin perusteet
+Keksi tehtävä	Tietokantojen perusteet
+
