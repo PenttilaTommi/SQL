@@ -216,6 +216,10 @@ tehtävä	kurssi
 Fotari	Ohjelmoinnin perusteet
 Keksi tehtävä	Tietokantojen perusteet
 
+## 14. tehtävä: pohdintaa taulujen yhdistämisestä
+
+Ylimääräiset rivit tulee opiskelija taulusta, koska tehtäviä suorittavia opiskelijoita on viisi.
+
 ## 15. tehtävä: Alikyselyt
 Tee nyt kysely, joka listaa kaikki kurssit, joilla ei ole yhtään tehtävää.
 
