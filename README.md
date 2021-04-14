@@ -134,3 +134,39 @@ Ohjelmoinnin perusteet	2013-08-01	4
 Ohjelmoinnin perusteet	2014-08-01	5
 Ohjelmoinnin jatkokurssi	2014-08-01	5
 Tietokantojen perusteet	2014-10-20	3
+
+## 11. Tehtävä: Haku useasta taulusta
+Tee nyt kysely, joka tulostaa jokaisen opiskelijan nimen, kurssisuorituksen päivämäärän, ja kurssisuorituksen arvosanan.
+
+näytä taulut
+SELECT nimi, päivämäärä, arvosana FROM Opiskelija, Kurssisuoritus
+
+
+
+
+Suoritetun kyselyn tulos
+nimi	päivämäärä	arvosana
+Pihla	2014-08-01	5
+Pihla	2014-08-01	5
+Pihla	2014-10-20	3
+Pihla	2013-08-01	4
+Joni	2014-08-01	5
+Joni	2014-08-01	5
+Joni	2014-10-20	3
+Joni	2013-08-01	4
+Anna	2014-08-01	5
+Anna	2014-08-01	5
+Anna	2014-10-20	3
+Anna	2013-08-01	4
+Krista	2014-08-01	5
+Krista	2014-08-01	5
+Krista	2014-10-20	3
+Krista	2013-08-01	4
+Matti	2014-08-01	5
+Matti	2014-08-01	5
+Matti	2014-10-20	3
+Matti	2013-08-01	4
+Gandhi	2014-08-01	5
+Gandhi	2014-08-01	5
+Gandhi	2014-10-20	3
+Gandhi	2013-08-01	4
