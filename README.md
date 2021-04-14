@@ -236,3 +236,21 @@ Ohjelmoinnin perusteet
 Ohjelmoinnin jatkokurssi
 Tietokantojen perusteet
 Tietokantojen perusteet, osa2
+
+## 16. Tehtävä
+
+Tee nyt kysely, jolla lasket kurssisuoritus-taulussa olevat kurssisuoritukset kurssin koodin perusteella. Käytä tulostuksessa sarekkeiden nimiä "kurssikoodi" ja "lukumäärä".
+
+SELECT kurssi AS kurssikoodi, COUNT(*) AS lukumäärä
+FROM Kurssisuoritus GROUP BY kurssi
+
+
+
+ Oikein meni!
+
+
+Suoritetun kyselyn tulos
+kurssikoodi	lukumäärä
+581325	2
+581328	1
+582103	1
