@@ -216,3 +216,19 @@ tehtävä	kurssi
 Fotari	Ohjelmoinnin perusteet
 Keksi tehtävä	Tietokantojen perusteet
 
+## 15. tehtävä: Alikyselyt
+Tee nyt kysely, joka listaa kaikki kurssit, joilla ei ole yhtään tehtävää.
+
+SELECT nimi FROM Kurssi
+WHERE kurssi.kurssitunnus
+NOT IN (SELECT nimi FROM Tehtävä)
+
+
+
+
+Suoritetun kyselyn tulos
+nimi
+Ohjelmoinnin perusteet
+Ohjelmoinnin jatkokurssi
+Tietokantojen perusteet
+Tietokantojen perusteet, osa2
