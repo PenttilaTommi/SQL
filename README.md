@@ -118,3 +118,19 @@ NOT LIKE kyselyllä tulee vastauksesksipelkkä matematiikka koska sanassa ei esi
 
 ## 10. Tehtävä: Yhdistelyharjoittelua
 
+Tee nyt kysely, jolla saat listattua kaikki Kurssit ja niihin liittyvät kurssisuoritukset. Valitse näytettäviksi sarakkeiksi vain kurssin nimi ja kurssisuorituksen päivämäärä ja arvosana.
+
+Kyselyn tuloksessa pitäisi olla 4 riviä ja 3 saraketta.
+
+
+SELECT nimi, päivämäärä, arvosana FROM Kurssi, Kurssisuoritus WHERE Kurssi.kurssitunnus = Kurssisuoritus.kurssi
+
+
+
+
+Suoritetun kyselyn tulos
+nimi	päivämäärä	arvosana
+Ohjelmoinnin perusteet	2013-08-01	4
+Ohjelmoinnin perusteet	2014-08-01	5
+Ohjelmoinnin jatkokurssi	2014-08-01	5
+Tietokantojen perusteet	2014-10-20	3
