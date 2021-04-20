@@ -407,3 +407,26 @@ INSERT INTO Opiskelija (opiskelijanumero, nimi)
 
 
  Virhe:Error: UNIQUE constraint failed: Opiskelija.opiskelijanumero
+
+
+## 24. TEHTÄVÄ: AUTOMAATTINEN PÄÄAVAIN
+Luo taulu Kurssi, jolla on sarakkeet kurssitunnus, nimi ja kuvaus. Kurssitunnuksen tulee olla kokonaisluku, nimen merkkijono, ja kuvauksen merkkijono. Tämän lisäksi, kurssitunnuksen tulee olla pääavain.
+
+CREATE TABLE Kurssi
+(
+kurssitunnus integer PRIMARY KEY,
+nimi varchar(200),
+kuvaus varchar(500)
+)
+
+
+
+
+näytä taulut
+Seuraavan kyselyn useampaan otteeseen suorittamisen pitäisi epäonnistua, sillä tietokantataulun kurssitunnus-sarakkeen pitäisi olla olla pääavain, ja sen takia uniikki.
+
+INSERT INTO Kurssi (kurssitunnus, nimi) VALUES (42, 'Meaning of Life')
+
+
+ Virhe:Error: UNIQUE constraint failed: Kurssi.kurssitunnus
+
