@@ -446,8 +446,8 @@ CREATE TABLE Kurssitehtävä
 tunnus integer PRIMARY KEY NOT NULL,
 tehtävä integer,
 kurssi integer,
-FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunns),
-FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunns)
+FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunnus),
+FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunnus)
 )
 
 
