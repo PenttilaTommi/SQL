@@ -294,3 +294,32 @@ Ohjelmoinnin jatkokurssi	1
 Ohjelmoinnin perusteet	2
 Tietokantojen perusteet	1
 Tietokantojen perusteet, osa2	0
+
+
+## 19. Tehtävä: Taulun luominen
+Luo tietokantaan taulu Kurssi, jolla on sarakkeet kurssitunnus, nimi ja kuvaus.
+
+näytä taulut
+CREATE TABLE Kurssi(kurssitunnus, nimi, kuvaus)
+
+
+
+## 20. Tehtävä: Rivin luominen
+Lisää nyt tauluun Kurssi kurssi nimeltä "SQL-kielen perusteet", jonka kurssitunnus on "12345" ja kuvaus "SELECT 'Hei maailma';".
+
+INSERT INTO Kurssi (kurssitunnus, nimi, kuvaus)
+    VALUES ('12345', 'SQL-kielen perusteet', "SELECT 'Hei maailma'")
+
+
+
+
+Tarkista vielä, että taulun luominen onnistui, ja että uusi kurssi löytyy tietokantataulusta.
+
+SELECT * FROM Kurssi
+
+
+
+
+Suoritetun kyselyn tulos
+kurssitunnus	nimi	kuvaus
+12345	SQL-kielen perusteet	SELECT 'Hei maailma'
