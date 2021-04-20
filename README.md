@@ -383,3 +383,26 @@ cid	name	type	notnull	dflt_value	pk
 0	kurssitunnus	integer	0		0
 1	nimi	varchar(200)	0		0
 2	kuvaus	varchar(500)	0		0
+
+
+## 23. Tehtävä: Pääavain
+Listaa nyt taulussa olevat opiskelijat. Mitä huomaat jos opiskelijoita lisätään tietokantatauluun enemmän?  ### ne saavat järjestysnumeron automaattisesti opiskelijanumeroksi.
+
+SELECT * FROM Opiskelija
+
+
+
+
+Suoritetun kyselyn tulos
+opiskelijanumero	nimi	syntymävuosi	pääaine
+1	Ada Lovelace		
+
+Koska tietokantatauluun on määritelty avain, joka on uniikki, ei taulun sarakkeessa opiskelijanumero voi olla kahta samaa arvoa. Kokeile tätä painamalla alla olevaa nappia ensin kerran -- jolloin opiskelija lisätään -- ja sitten vielä toisen kerran. Mitä virheviesti kertoo? 
+
+### Kerto että samalla opiskelijanumerolla ei voi lisätä uutta. Eli opiskelijanumeroon jo käytössä.
+
+INSERT INTO Opiskelija (opiskelijanumero, nimi)
+    VALUES (999, 'Beezow Doo-Doo Zopittybop-Bop-Bop')
+
+
+ Virhe:Error: UNIQUE constraint failed: Opiskelija.opiskelijanumero
