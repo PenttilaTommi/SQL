@@ -254,3 +254,24 @@ kurssikoodi	lukumäärä
 581325	2
 581328	1
 582103	1
+
+
+## 17. Tehtävä: Yhteenvetokysely
+
+Tee nyt kysely, jossa lasket kurssisuoritus-taulussa olevien kurssien suoritukset -- taas koodin perusteella. Tällä kertaa tulostuksessa tulee kuitenkn tulostaa kurssikoodin sijaan kurssin nimi. Käytä sarakkeiden niminä "kurssi" ja "lukumäärä". (Huomaa, että edellisessä osassa katsotaan kurssitehtäviä, tässä kurssisuorituksia!)
+
+SELECT Kurssi.nimi  AS kurssi, COUNT(*) AS lukumäärä 
+FROM Kurssisuoritus, Kurssi 
+WHERE Kurssi.kurssitunnus = Kurssisuoritus.kurssi
+GROUP BY kurssi
+
+
+
+ Oikein meni!
+
+
+Suoritetun kyselyn tulos
+kurssi	lukumäärä
+Ohjelmoinnin perusteet	2
+Tietokantojen perusteet	1
+Ohjelmoinnin jatkokurssi	1
