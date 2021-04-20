@@ -453,3 +453,17 @@ FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunnus)
 
  Virhe:Error: UNIQUE constraint failed: Kurssi.kurssitunnus
 
+## 26. Tehtävä: Viitteiden huomioiminen rivejä lisätessä
+Lisää nyt Tehtävä-tauluun muutama rivi, ja määrittele olemassaoleville kursseille muutamia tehtäviä.
+
+INSERT INTO Kurssitehtävä (kurssi, tehtävä)
+VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'teht1'));
+
+INSERT INTO Kurssitehtävä (kurssi, tehtävä)
+VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'teht2'));
+
+INSERT INTO Kurssitehtävä (kurssi, tehtävä)
+VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Tikape'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'teht3'));
+
+
+
