@@ -275,3 +275,22 @@ kurssi	lukumäärä
 Ohjelmoinnin perusteet	2
 Tietokantojen perusteet	1
 Ohjelmoinnin jatkokurssi	1
+
+## 18. Tehtävä: LEFT JOIN
+
+Tee nyt LEFT JOIN -operaatiota käyttäen kysely, jolla listaat kurssikohtaiset suorituslukumäärät siten, että myös ne kurssit, joilla ei ole yhtäkään suoritusta otetaan huomioon. Käytä sarakkeiden niminä nimiä "kurssi" ja "lukumäärä".
+
+SELECT k.nimi AS kurssi, COUNT (ks.kurssi) as lukumäärä FROM kurssi k LEFT JOIN Kurssisuoritus ks 
+ON k.kurssitunnus = ks.kurssi GROUP BY k.nimi
+
+
+
+ Oikein meni!
+
+
+Suoritetun kyselyn tulos
+kurssi	lukumäärä
+Ohjelmoinnin jatkokurssi	1
+Ohjelmoinnin perusteet	2
+Tietokantojen perusteet	1
+Tietokantojen perusteet, osa2	0
