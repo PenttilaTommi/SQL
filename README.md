@@ -356,3 +356,30 @@ cid	name	type	notnull	dflt_value	pk
 1	ikä	interger(2)	0		0
 2	harrastukset	varchar(200)	0		0
 3	syntymävuosi	date(4)	0		0
+
+## 22. TEHTÄVÄ: PRAGMA
+Luo taulu Kurssi, jolla on sarakkeet kurssitunnus, nimi ja kuvaus. Kurssitunnuksen tulee olla kokonaisluku, nimen merkkijono, ja kuvauksen merkkijono.
+
+CREATE TABLE Kurssi
+(
+kurssitunnus integer,
+nimi varchar(200),
+kuvaus varchar(500)
+)
+
+
+
+
+näytä taulut
+Varmista vielä PRAGMA-komennolla, että sarakkeiden tyypit ovat halutut.
+
+PRAGMA TABLE_INFO(Kurssi)
+
+
+
+
+Suoritetun kyselyn tulos
+cid	name	type	notnull	dflt_value	pk
+0	kurssitunnus	integer	0		0
+1	nimi	varchar(200)	0		0
+2	kuvaus	varchar(500)	0		0
