@@ -323,3 +323,36 @@ SELECT * FROM Kurssi
 Suoritetun kyselyn tulos
 kurssitunnus	nimi	kuvaus
 12345	SQL-kielen perusteet	SELECT 'Hei maailma'
+
+
+## 21. Tehtävä: Attribuutteja
+Luo ensin tarkasteltava tietokantataulu.
+
+CREATE TABLE Tommintaulu
+(
+työpaikka varchar(100),
+ikä interger(2),
+harrastukset varchar(200),
+syntymävuosi date(4)
+)
+
+
+
+
+Suoritetun kyselyn tulos
+Tyhjä vastaus
+
+näytä taulut
+Kun tietokantataulu on luotu, saat tarkasteltua sen sisältöä PRAGMA-komennolla.
+
+PRAGMA TABLE_INFO(Tommintaulu)
+
+
+
+
+Suoritetun kyselyn tulos
+cid	name	type	notnull	dflt_value	pk
+0	työpaikka	varchar(100)	0		0
+1	ikä	interger(2)	0		0
+2	harrastukset	varchar(200)	0		0
+3	syntymävuosi	date(4)	0		0
