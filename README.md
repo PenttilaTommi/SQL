@@ -427,6 +427,29 @@ Seuraavan kyselyn useampaan otteeseen suorittamisen pitäisi epäonnistua, sill�
 
 INSERT INTO Kurssi (kurssitunnus, nimi) VALUES (42, 'Meaning of Life')
 
+## 25. Tehtävä: Pääavaimet ja viiteavaimet
+Toteuta nyt taulut Kurssitehtävä ja Tehtävä siten, että niissä on määriteltynä sekä pääavaimet että viiteavaimet. Pohdi, missä järjestyksessä taulut tulee toteuttaa, jotta saat viiteavaimet määriteltyä oikein.
+
+piilota taulut
+Taulut
+Kurssi ( kurssitunnus integer PRIMARY KEY, nimi varchar(200) NOT NULL, kuvaus varchar(3000) )
+Tehtävä ( tunnus integer PRIMARY KEY NOT NULL, nimi varchart(200) NOT NULL, kuvaus varchar(50) )
+Kurssitehtävä ( tunnus integer PRIMARY KEY NOT NULL, tehtävä integer, kurssi integer, FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunns), FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunns) )
+CREATE TABLE Tehtävä
+(
+tunnus integer PRIMARY KEY NOT NULL,
+nimi varchart(200) NOT NULL,
+kuvaus varchar(50)
+);
+CREATE TABLE Kurssitehtävä
+(
+tunnus integer PRIMARY KEY NOT NULL,
+tehtävä integer,
+kurssi integer,
+FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunns),
+FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunns)
+)
+
 
  Virhe:Error: UNIQUE constraint failed: Kurssi.kurssitunnus
 
