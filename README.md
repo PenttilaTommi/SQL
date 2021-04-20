@@ -386,7 +386,8 @@ cid	name	type	notnull	dflt_value	pk
 
 
 ## 23. Tehtävä: Pääavain
-Listaa nyt taulussa olevat opiskelijat. Mitä huomaat jos opiskelijoita lisätään tietokantatauluun enemmän?  ### ne saavat järjestysnumeron automaattisesti opiskelijanumeroksi.
+Listaa nyt taulussa olevat opiskelijat. Mitä huomaat jos opiskelijoita lisätään tietokantatauluun enemmän?  
+### ne saavat järjestysnumeron automaattisesti opiskelijanumeroksi.
 
 SELECT * FROM Opiskelija
 
