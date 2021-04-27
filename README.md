@@ -12,7 +12,7 @@ Olen antanut sähköpostini varmasti kymmeniin palveluihin. Melko usein vasten t
 ## 4. Tehtävä: Hae kaikki
 Tee nyt kysely, jolla saat listattua kaikki Kurssisuoritus-taulussa olevat rivit.
 
-näytä taulut
+
 select * from Kurssisuoritus
 
 
@@ -28,9 +28,11 @@ opiskelija	kurssi	päivämäärä	arvosana
 999998	Ohjelmoinnin perusteet	2013-08-01	4
 
 ## 5. Tehtävä: Hae kurssien nimet
+
+
 Tee nyt kysely, jolla saat listattua Kurssisuoritus-taulussa olevien kurssien nimet.
 
-näytä taulut
+
 select kurssi from kurssisuoritus
 
 
@@ -39,16 +41,22 @@ select kurssi from kurssisuoritus
 
 
 Suoritetun kyselyn tulos
+
+
 kurssi
+
 Ohjelmoinnin perusteet
+
 Ohjelmoinnin jatkokurssi
+
 Tietokantojen perusteet
+
 Ohjelmoinnin perusteet
 
 ## 6. Tehtävä: Uniikit rivit
 Tee nyt kysely, jolla saat listattua Kurssisuoritus-taulussa olevat uniikit kurssit.
 
-näytä taulut
+
 select DISTINCT kurssi from kurssisuoritus
 
 
@@ -57,15 +65,19 @@ select DISTINCT kurssi from kurssisuoritus
 
 
 Suoritetun kyselyn tulos
+
 kurssi
+
 Ohjelmoinnin perusteet
+
 Ohjelmoinnin jatkokurssi
+
 Tietokantojen perusteet
 
 ## 7. Tehtävä: Hae nimellä
 Tee nyt kysely, jolla saat listattua Opiskelija-taulusta kaikki ne opiskelijat, joiden nimi on 'Anna'.
 
-näytä taulut
+
 select * from opiskelija where nimi ='anna'
 
 
@@ -78,10 +90,10 @@ Tyhjä vastaus
 
 ## 8. Tehtävä: Hae ehdolla
 
-8. Tehtävä: Hae ehdolla
+
 Tee nyt kysely, jolla saat listattua Kurssisuoritus-taulusta kaikki Pihla-nimisen opiskelijan suoritukset. Voit olettaa, että Opiskelija-taulun sisältö on täsmälleen se, kuin mikä se tähän asti on ollut. Vinkki: millä Pihlan tunnistaa kummassakin taulussa?
 
-näytä taulut
+
 select * from kurssisuoritus where opiskelija = 999999
 
 
@@ -97,11 +109,11 @@ opiskelija	kurssi	päivämäärä	arvosana
 
 ## 9. Tehtävä: LIKE
 
-ee nyt kysely, jolla saat listattua kaikki Opiskelija-taulussa olevat pääaineet, joissa esiintyy sana "tiede".
+tee nyt kysely, jolla saat listattua kaikki Opiskelija-taulussa olevat pääaineet, joissa esiintyy sana "tiede".
 
 Huom! Tee kysely siten, että näet vain uniikit vastaukset. Kyselyn vastauksessa pitäisi olla vain 2 riviä. Kun saat kyselyn toimimaan, kokeile mitä tapahtuu jos muutat 'LIKE'-operaation muotoon 'NOT LIKE'.
 
-näytä taulut
+
 SELECT DISTINCT pääaine FROM Opiskelija WHERE pääaine LIKE '%tiede%'
 
 
@@ -138,7 +150,7 @@ Tietokantojen perusteet	2014-10-20	3
 ## 11. Tehtävä: Haku useasta taulusta
 Tee nyt kysely, joka tulostaa jokaisen opiskelijan nimen, kurssisuorituksen päivämäärän, ja kurssisuorituksen arvosanan.
 
-näytä taulut
+
 SELECT nimi, päivämäärä, arvosana FROM Opiskelija, Kurssisuoritus
 
 
@@ -172,9 +184,11 @@ Gandhi	2014-10-20	3
 Gandhi	2013-08-01	4
 
 ## 12. Tehtävä: Tulosten otsikointi
+
+
 Tee nyt kysely, joka tulostaa jokaiseen kurssiin liittyvän tehtävän. Tulostuksen otsikoiden nimien tulee olla 'kurssi' ja 'tehtävä'.
 
-näytä taulut
+
 SELECT Kurssi.nimi  AS kurssi, Tehtävä.nimi AS tehtävä 
 FROM Kurssi, Tehtävä
 
@@ -199,7 +213,7 @@ Tietokantojen perusteet	Koetus
 ## 13. Tehtävä: Hakujen jäsentely
 Tee nyt kysely, joka tulostaa kaikki tehtävät, jotka opiskelija 'Anna' on suorittanut. Tee tulostuksesta sellainen, että yksi sarake sisältää kurssin nimen, ja toinen sarake tehtävän nimen.
 
-näytä taulut
+
 
 SELECT Tehtävä.nimi AS tehtävä, Kurssi.nimi AS kurssi FROM Tehtävä, Kurssi, Kurssitehtävä, Tehtäväsuoritus, Opiskelija
 WHERE Tehtävä.tunnus = Kurssitehtävä.tehtävä
@@ -299,7 +313,7 @@ Tietokantojen perusteet, osa2	0
 ## 19. Tehtävä: Taulun luominen
 Luo tietokantaan taulu Kurssi, jolla on sarakkeet kurssitunnus, nimi ja kuvaus.
 
-näytä taulut
+
 CREATE TABLE Kurssi(kurssitunnus, nimi, kuvaus)
 
 
@@ -321,11 +335,14 @@ SELECT * FROM Kurssi
 
 
 Suoritetun kyselyn tulos
+
 kurssitunnus	nimi	kuvaus
+
 12345	SQL-kielen perusteet	SELECT 'Hei maailma'
 
 
 ## 21. Tehtävä: Attribuutteja
+
 Luo ensin tarkasteltava tietokantataulu.
 
 CREATE TABLE Tommintaulu
@@ -342,7 +359,7 @@ syntymävuosi date(4)
 Suoritetun kyselyn tulos
 Tyhjä vastaus
 
-näytä taulut
+
 Kun tietokantataulu on luotu, saat tarkasteltua sen sisältöä PRAGMA-komennolla.
 
 PRAGMA TABLE_INFO(Tommintaulu)
@@ -358,6 +375,7 @@ cid	name	type	notnull	dflt_value	pk
 3	syntymävuosi	date(4)	0		0
 
 ## 22. TEHTÄVÄ: PRAGMA
+
 Luo taulu Kurssi, jolla on sarakkeet kurssitunnus, nimi ja kuvaus. Kurssitunnuksen tulee olla kokonaisluku, nimen merkkijono, ja kuvauksen merkkijono.
 
 CREATE TABLE Kurssi
@@ -370,7 +388,7 @@ kuvaus varchar(500)
 
 
 
-näytä taulut
+
 Varmista vielä PRAGMA-komennolla, että sarakkeiden tyypit ovat halutut.
 
 PRAGMA TABLE_INFO(Kurssi)
@@ -386,7 +404,9 @@ cid	name	type	notnull	dflt_value	pk
 
 
 ## 23. Tehtävä: Pääavain
+
 Listaa nyt taulussa olevat opiskelijat. Mitä huomaat jos opiskelijoita lisätään tietokantatauluun enemmän?  
+
 ### ne saavat järjestysnumeron automaattisesti opiskelijanumeroksi.
 
 SELECT * FROM Opiskelija
@@ -396,6 +416,7 @@ SELECT * FROM Opiskelija
 
 Suoritetun kyselyn tulos
 opiskelijanumero	nimi	syntymävuosi	pääaine
+
 1	Ada Lovelace		
 
 Koska tietokantatauluun on määritelty avain, joka on uniikki, ei taulun sarakkeessa opiskelijanumero voi olla kahta samaa arvoa. Kokeile tätä painamalla alla olevaa nappia ensin kerran -- jolloin opiskelija lisätään -- ja sitten vielä toisen kerran. Mitä virheviesti kertoo? 
@@ -403,6 +424,7 @@ Koska tietokantatauluun on määritelty avain, joka on uniikki, ei taulun sarakk
 ### Kerto että samalla opiskelijanumerolla ei voi lisätä uutta. Eli opiskelijanumeroon jo käytössä.
 
 INSERT INTO Opiskelija (opiskelijanumero, nimi)
+
     VALUES (999, 'Beezow Doo-Doo Zopittybop-Bop-Bop')
 
 
@@ -422,7 +444,7 @@ kuvaus varchar(500)
 
 
 
-näytä taulut
+
 Seuraavan kyselyn useampaan otteeseen suorittamisen pitäisi epäonnistua, sillä tietokantataulun kurssitunnus-sarakkeen pitäisi olla olla pääavain, ja sen takia uniikki.
 
 INSERT INTO Kurssi (kurssitunnus, nimi) VALUES (42, 'Meaning of Life')
@@ -432,15 +454,6 @@ INSERT INTO Kurssi (kurssitunnus, nimi) VALUES (42, 'Meaning of Life')
 
 Toteuta nyt taulut Kurssitehtävä ja Tehtävä siten, että niissä on määriteltynä sekä pääavaimet että viiteavaimet. Pohdi, missä järjestyksessä taulut tulee toteuttaa, jotta saat viiteavaimet määriteltyä oikein.
 
-piilota taulut
-
-
-Taulut
-
-
-Kurssi ( kurssitunnus integer PRIMARY KEY, nimi varchar(200) NOT NULL, kuvaus varchar(3000) )
-Tehtävä ( tunnus integer PRIMARY KEY NOT NULL, nimi varchart(200) NOT NULL, kuvaus varchar(50) )
-Kurssitehtävä ( tunnus integer PRIMARY KEY NOT NULL, tehtävä integer, kurssi integer, FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunns), FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunns) )  
 
 
 CREATE TABLE Tehtävä
