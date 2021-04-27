@@ -480,4 +480,6 @@ VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Tikape'),(SELECT tunnus F
 Alter table komennolla saadaan lisättyä, poistettua tai muokattua olemassa olevan taulun sarakkeita. Toisaalta sillä saadaan myös lisättyä ja poistettua tauluun asetettuja rajoituksia. 
 
 Esimerkki komentoja:
-ALTER TABLE ADD
+ALTER TABLE ADD komennolla pystyy lisäämään sarakkeita.
+
+
