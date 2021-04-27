@@ -477,7 +477,7 @@ FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunnus)
 ## 26. Tehtävä: Viitteiden huomioiminen rivejä lisätessä
 Lisää nyt Tehtävä-tauluun muutama rivi, ja määrittele olemassaoleville kursseille muutamia tehtäviä.
 
-INSERT INTO Tehtävä(nimi)VALUES((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = ''kahvi'));
+INSERT INTO Tehtävä(nimi)VALUES((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'kahvi'));
 
 INSERT INTO Tehtävä(nimi)VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'tietoturva'));
 
