@@ -427,14 +427,21 @@ Seuraavan kyselyn useampaan otteeseen suorittamisen pitäisi epäonnistua, sill�
 
 INSERT INTO Kurssi (kurssitunnus, nimi) VALUES (42, 'Meaning of Life')
 
-## 25. Tehtävä: Pääavaimet ja viiteavaimet
+## 25. Tehtävä: Pääavaimet ja viiteavaimet  
+
+
 Toteuta nyt taulut Kurssitehtävä ja Tehtävä siten, että niissä on määriteltynä sekä pääavaimet että viiteavaimet. Pohdi, missä järjestyksessä taulut tulee toteuttaa, jotta saat viiteavaimet määriteltyä oikein.
 
 piilota taulut
+
+
 Taulut
+
+
 Kurssi ( kurssitunnus integer PRIMARY KEY, nimi varchar(200) NOT NULL, kuvaus varchar(3000) )
 Tehtävä ( tunnus integer PRIMARY KEY NOT NULL, nimi varchart(200) NOT NULL, kuvaus varchar(50) )
-Kurssitehtävä ( tunnus integer PRIMARY KEY NOT NULL, tehtävä integer, kurssi integer, FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunns), FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunns) )
+Kurssitehtävä ( tunnus integer PRIMARY KEY NOT NULL, tehtävä integer, kurssi integer, FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunns), FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunns) )  
+
 
 CREATE TABLE Tehtävä
 (
@@ -468,3 +475,9 @@ VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Tikape'),(SELECT tunnus F
 
 
 
+## 27. Alter table
+
+Alter table komennolla saadaan lisättyä, poistettua tai muokattua olemassa olevan taulun sarakkeita. Toisaalta sillä saadaan myös lisättyä ja poistettua tauluun asetettuja rajoituksia. 
+
+Esimerkki komentoja:
+ALTER TABLE ADD
