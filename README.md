@@ -481,7 +481,7 @@ INSERT INTO Tehtävä(nimi)VALUES((SELECT kurssitunnus FROM Kurssi WHERE nimi = 
 
 INSERT INTO Tehtävä(nimi)VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'tietoturva'));
 
-INSERT INTO Tehtävä(nimi)VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'teht2'));
+INSERT INTO Tehtävä(nimi)VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'sql'));
 
 
 ## 27. Alter table
