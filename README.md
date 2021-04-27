@@ -481,6 +481,12 @@ Alter table komennolla saadaan lisättyä, poistettua tai muokattua olemassa ole
 
 Esimerkki komentoja:
 
-ALTER TABLE ADD komennolla pystyy lisäämään sarakkeita.
+ ADD komennolla pystyy lisäämään sarakkeita.
+
+ DROP COLUMN komenolla voi poistaa sarakkeen.
+ 
+ ALTER/MODIFY COLUMN komenolla  voi vaihtaa sarakkeen datatyyppiä.
+ 
+ 
 
 
