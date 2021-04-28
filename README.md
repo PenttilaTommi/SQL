@@ -449,6 +449,10 @@ Seuraavan kyselyn useampaan otteeseen suorittamisen pitäisi epäonnistua, sill�
 
 INSERT INTO Kurssi (kurssitunnus, nimi) VALUES (42, 'Meaning of Life')
 
+Adan osuus
+
+INSERT INTO Kurssisuoritus(opiskelija,kurssi,päivämäärä,arvosana,opintopistemäärä) VALUES(1,2 , '27.04.2021',4, 5)
+
 ## 25. Tehtävä: Pääavaimet ja viiteavaimet  
 
 
