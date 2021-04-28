@@ -484,6 +484,16 @@ INSERT INTO Tehtävä(nimi)VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi =
 INSERT INTO Tehtävä(nimi)VALUES ((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Ohpe'),(SELECT tunnus FROM Tehtävä WHERE nimi = 'sql'));
 
 
+INSERT INTO Kurssitehtävä(kurssi, tehtävä) VALUES((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Tikape'), (SELECT tunnus FROM Tehtävä WHERE nimi = 'eka tehtävä'));
+
+INSERT INTO Kurssitehtävä(kurssi, tehtävä) VALUES((SELECT kurssitunnus FROM Kurssi WHERE nimi = 'Tikape'), (SELECT tunnus FROM Tehtävä WHERE nimi = 'toka tehtävä'));
+
+INSERT INTO Kurssitehtävä(kurssi, tehtävä) VALUES((SELECT kurssitunnus FROM Tehtävä WHERE nimi = 'Ohpe'), (SELECT tunnus FROM Tehtävä WHERE nimi = 'eka tehtävä'));
+
+INSERT INTO Kurssitehtävä(kurssi, tehtävä) VALUES((SELECT kurssitunnus FROM Tehtävä WHERE nimi = 'Ohpe'), (SELECT tunnus FROM Tehtävä WHERE nimi = 'toka tehtävä'));
+
+
+
 ## 27. Alter table
 
 Alter table komennolla saadaan lisättyä, poistettua tai muokattua olemassa olevan taulun sarakkeita. Toisaalta sillä saadaan myös lisättyä ja poistettua tauluun asetettuja rajoituksia. 
