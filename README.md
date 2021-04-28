@@ -457,18 +457,29 @@ Toteuta nyt taulut Kurssitehtävä ja Tehtävä siten, että niissä on määrit
 
 
 CREATE TABLE Tehtävä
+
 (
 tunnus integer PRIMARY KEY NOT NULL,
+
 nimi varchart(200) NOT NULL,
+
 kuvaus varchar(50)
+
 );
+
 CREATE TABLE Kurssitehtävä
+
 (
 tunnus integer PRIMARY KEY NOT NULL,
+
 tehtävä integer,
+
 kurssi integer,
+
 FOREIGN KEY(tehtävä)REFERENCES Tehtävä(tunnus),
+
 FOREIGN KEY(kurssi)REFERENCES Kurssi(kurssitunnus)
+
 )
 
 
