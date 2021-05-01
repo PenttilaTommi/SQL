@@ -78,7 +78,7 @@ Tietokantojen perusteet
 Tee nyt kysely, jolla saat listattua Opiskelija-taulusta kaikki ne opiskelijat, joiden nimi on 'Anna'.
 
 
-select * from opiskelija where nimi ='anna'
+select * from opiskelija where nimi ='Anna'
 
 
 
@@ -151,8 +151,9 @@ Tietokantojen perusteet	2014-10-20	3
 Tee nyt kysely, joka tulostaa jokaisen opiskelijan nimen, kurssisuorituksen päivämäärän, ja kurssisuorituksen arvosanan.
 
 
-SELECT nimi, päivämäärä, arvosana FROM Opiskelija, Kurssisuoritus
 
+
+SELECT nimi, päivämäärä, arvosana FROM Opiskelija, Kurssisuoritus WHERE Opiskelija.opiskelijanumero = Kurssisuoritus.opiskelija
 
 
 
@@ -161,27 +162,8 @@ nimi	päivämäärä	arvosana
 Pihla	2014-08-01	5
 Pihla	2014-08-01	5
 Pihla	2014-10-20	3
-Pihla	2013-08-01	4
-Joni	2014-08-01	5
-Joni	2014-08-01	5
-Joni	2014-10-20	3
 Joni	2013-08-01	4
-Anna	2014-08-01	5
-Anna	2014-08-01	5
-Anna	2014-10-20	3
-Anna	2013-08-01	4
-Krista	2014-08-01	5
-Krista	2014-08-01	5
-Krista	2014-10-20	3
-Krista	2013-08-01	4
-Matti	2014-08-01	5
-Matti	2014-08-01	5
-Matti	2014-10-20	3
-Matti	2013-08-01	4
-Gandhi	2014-08-01	5
-Gandhi	2014-08-01	5
-Gandhi	2014-10-20	3
-Gandhi	2013-08-01	4
+
 
 ## 12. Tehtävä: Tulosten otsikointi
 
@@ -189,26 +171,16 @@ Gandhi	2013-08-01	4
 Tee nyt kysely, joka tulostaa jokaiseen kurssiin liittyvän tehtävän. Tulostuksen otsikoiden nimien tulee olla 'kurssi' ja 'tehtävä'.
 
 
+
+
 SELECT Kurssi.nimi  AS kurssi, Tehtävä.nimi AS tehtävä 
-FROM Kurssi, Tehtävä
+FROM Kurssi, Tehtävä, Kurssitehtävä
+  WHERE Tehtävä.tunnus= Kurssitehtävä.tehtävä AND  Kurssi.kurssitunnus = Kurssitehtävä.kurssi
+		    
 
 
 
 
-Suoritetun kyselyn tulos
-kurssi	tehtävä
-Ohjelmoinnin perusteet	Fotari
-Ohjelmoinnin perusteet	Onko tässä rekursio?
-Ohjelmoinnin perusteet	Keksi tehtävä
-Ohjelmoinnin perusteet	Koetus
-Ohjelmoinnin jatkokurssi	Fotari
-Ohjelmoinnin jatkokurssi	Onko tässä rekursio?
-Ohjelmoinnin jatkokurssi	Keksi tehtävä
-Ohjelmoinnin jatkokurssi	Koetus
-Tietokantojen perusteet	Fotari
-Tietokantojen perusteet	Onko tässä rekursio?
-Tietokantojen perusteet	Keksi tehtävä
-Tietokantojen perusteet	Koetus
 
 ## 13. Tehtävä: Hakujen jäsentely
 Tee nyt kysely, joka tulostaa kaikki tehtävät, jotka opiskelija 'Anna' on suorittanut. Tee tulostuksesta sellainen, että yksi sarake sisältää kurssin nimen, ja toinen sarake tehtävän nimen.
@@ -237,19 +209,10 @@ Mä en kyllä täysin ymmärrä kysymystä, koska näissähän haetaan lähtöko
 ## 15. tehtävä: Alikyselyt
 Tee nyt kysely, joka listaa kaikki kurssit, joilla ei ole yhtään tehtävää.
 
-SELECT nimi FROM Kurssi
-WHERE kurssi.kurssitunnus
-NOT IN (SELECT nimi FROM Tehtävä)
-
-
-
-
-Suoritetun kyselyn tulos
-nimi
-Ohjelmoinnin perusteet
-Ohjelmoinnin jatkokurssi
-Tietokantojen perusteet
-Tietokantojen perusteet, osa2
+SELECT * FROM Kurssi, Kurssitehtävä
+    LEFT JOIN Tehtävä
+        ON Tehtävä.tunnus= Kurssitehtävä.tehtävä AND Kurssi.kurssitunnus = Kurssitehtävä.kurssi
+ WHERE Tehtävä.nimi IS null
 
 ## 16. Tehtävä
 
