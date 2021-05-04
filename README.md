@@ -209,10 +209,8 @@ Mä en kyllä täysin ymmärrä kysymystä, koska näissähän haetaan lähtöko
 ## 15. tehtävä: Alikyselyt
 Tee nyt kysely, joka listaa kaikki kurssit, joilla ei ole yhtään tehtävää.
 
-SELECT * FROM Kurssi, Kurssitehtävä
-    LEFT JOIN Tehtävä
-        ON Tehtävä.tunnus= Kurssitehtävä.tehtävä AND Kurssi.kurssitunnus = Kurssitehtävä.kurssi
- WHERE Tehtävä.nimi IS null
+ 
+ SELECT nimi FROM Kurssi WHERE kurssitunnus NOT IN (SELECT Kurssi FROM kurssitehtävä)
 
 ## 16. Tehtävä
 
